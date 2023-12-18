@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Count from './Count';
+import ToggleButton from './ToggleButton';
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/*<App />  react에서 주석은 {/* * /} 표기함   */} 
-    <Count />
+    {/*<Count />*/}
+    <ToggleButton />
   </React.StrictMode>
 );
 reportWebVitals();
