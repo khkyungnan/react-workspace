@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Count from './Count';
 import ToggleButton from './ToggleButton';
-
+import IndexExample from './IndexExample';
 
 
 
@@ -14,7 +14,8 @@ root.render(
   <React.StrictMode>
     {/*<App />  react에서 주석은 {/* * /} 표기함   */} 
     {/*<Count />*/}
-    <ToggleButton />
+    {/*<ToggleButton />*/}
+    <IndexExample />
   </React.StrictMode>
 );
 reportWebVitals();
