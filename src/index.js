@@ -7,7 +7,7 @@ import Count from './js/Count';
 import ToggleButton from './js/ToggleButton';
 import IndexExample from './js/IndexExample';
 import ImageChange from './js/ImageChange';
-
+import ObjectExample from './js/ObjectExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +16,8 @@ root.render(
     {/*<Count />*/}
     {/*<ToggleButton />*/}
     {/*<IndexExample />*/}
-    <ImageChange />
+    {/*<ImageChange />*/}
+    <ObjectExample />
   </React.StrictMode>
 );
 reportWebVitals();
