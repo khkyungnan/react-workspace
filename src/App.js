@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React,{useState} from 'react';
 // useState : 상태를 관리하기 위해 사용되는 함수
 //사용법 : 배열형식으로 사용을 하며, 
 //첫번째 배열은 현재 상태값   두번째 배열은 상태 업데이트 하는 값
