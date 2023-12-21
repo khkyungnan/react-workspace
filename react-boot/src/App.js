@@ -65,8 +65,43 @@ function App() {
               </div>           
             </div>
           </div>
-
         </section>
+
+        <section>
+          <h2 className='text-center mb-4'>Contact Us</h2>
+          <form>
+            <div className='mb-3'>
+              <label className='form-label'>
+                Name
+              </label>
+              <input type='text' className='form-control' id='name'/>
+            </div>
+
+            <div className='mb-3'>
+              <label className='form-label'>
+                Email
+              </label>
+              <input type="email" className='form-control'
+                aria-describedby='이메일 입력'
+              />
+            </div>
+
+            <div className='mb-3'>
+              <label className='form-label'>
+                메세지작성
+              </label>
+              <textarea rows="4" className='form-control'></textarea>
+            </div>
+            <button className='btn btn-primary mb-3'>
+              전송하기
+            </button>
+          </form>
+        </section>
+
+
+
+
+
 
       </main>
       <footer className='bg-dark text-light text-center py-3'>
