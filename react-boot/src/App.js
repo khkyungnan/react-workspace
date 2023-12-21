@@ -12,12 +12,66 @@ function App() {
           <div className='row'>
             <div className='col-md-6'>
               <img className='img-fluid' src="https://img.freepik.com/free-vector/simple-geometric-seo-sessions-facebook-profile-cover_23-2149509971.jpg?w=900&t=st=1703121945~exp=1703122545~hmac=380d3ff3b58be68a3d954b9e215a25f7207f2e3bd6e620236cea037624be5e8a"/>
-              <h2>하나</h2>
-              <p>이것은 하나입니다.</p>
+            </div>
+            <div className='col-md-6'>
+              <h2>About</h2>
+              <p>이미지 설명입니다.</p>
             </div>
           </div> 
-        </section>    
+        </section>   
+        <section className='mb-5'>
+          <div className='row'>
+          <div className='col-md-6'>
+              <h2>About</h2>
+              <p>이미지 설명입니다.</p>
+            </div>
+            <div className='col-md-6'>
+              <img className='img-fluid' src="https://img.freepik.com/free-vector/simple-geometric-seo-sessions-facebook-profile-cover_23-2149509971.jpg?w=900&t=st=1703121945~exp=1703122545~hmac=380d3ff3b58be68a3d954b9e215a25f7207f2e3bd6e620236cea037624be5e8a"/>
+            </div>
+            
+          </div> 
+        </section>
+        <section className='mb-5'>
+          <h2 className='mb-4'>카드시작</h2>
+          <div className='row'>
+            <div className='col-md-4 mb-4'>
+              <div className='card'>
+                <div className='card-body'>
+                  <h5 className='card-title'>카드1</h5>
+                  <p className='card-text'>
+                    안녕하세요. 카드1입니다.
+                  </p>
+                </div>
+              </div>           
+            </div>
+            <div className='col-md-4 mb-4'>
+              <div className='card'>
+                <div className='card-body'>
+                  <h5 className='card-title'>카드2</h5>
+                  <p className='card-text'>
+                    안녕하세요. 카드2입니다.
+                  </p>
+                </div>
+              </div>           
+            </div>
+            <div className='col-md-4 mb-4'>
+              <div className='card'>
+                <div className='card-body'>
+                  <h5 className='card-title'>카드3</h5>
+                  <p className='card-text'>
+                    안녕하세요. 카드3입니다.
+                  </p>
+                </div>
+              </div>           
+            </div>
+          </div>
+
+        </section>
+
       </main>
+      <footer className='bg-dark text-light text-center py-3'>
+        <p>&copy; 2023 My React Site</p>
+      </footer>
     </div>
   );
 }
