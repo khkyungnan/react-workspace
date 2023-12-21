@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import DogImage from "./DogInfo";
+import UserExam from "./UserExam";
 function App() {
   return (
     <div className="App">
-      <DogImage />
+      <UserExam />
     </div>
   );
 }
