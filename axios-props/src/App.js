@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import UserExam from "./UserExam";
+import PostComment from "./PostComment";
 function App() {
   return (
     <div className="App">
-      <UserExam />
+      <PostComment />
     </div>
   );
 }

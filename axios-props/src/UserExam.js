@@ -24,7 +24,7 @@ const UserList = () => {
                     <li key={user.id}>
                         <p>유저  이름 : {user.name}</p>
                         <p>유저이메일 : {user.email}</p>
-                        <p>유저  주소 : {user.address &&user.address.street}</p>
+                        <p>유저  주소 : {user.address && user.address.street}</p>
                     </li>
                 ))}
             </ul>
