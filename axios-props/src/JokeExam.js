@@ -1,8 +1,22 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import axios from "axios";
-
+export default Joke;
 const Joke = () => {
     const [joke, setJoke] = useState('');
+
+    // 비동기 작업 콜백 지옥을 방지 
+    // promise
+    // useContext
+    /*
+    //axios 조금 더 간단한 네트워크 요청을 전달
+    fetch('https://v2.jokeapi.dev/joke/Any')
+    .then(response =>{
+        if(!response.ok){
+            throw new Error('에러내용');
+        }
+        return response.json();
+    })
+    */
     /*
         useEffect(() => {
             const fetchData = async () => {

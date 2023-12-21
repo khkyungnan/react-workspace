@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import PostComment from "./PostComment";
+import MovieListCarousel from "./MovieListCarousel";
 function App() {
   return (
     <div className="App">
-      <PostComment />
+      <MovieListCarousel />
     </div>
   );
 }
