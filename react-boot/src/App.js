@@ -82,8 +82,9 @@ function App() {
                 Email
               </label>
               <input type="email" className='form-control'
-                aria-describedby='이메일 입력'
+                aria-describedby='emailSmall'
               />
+              <small id='emailSmall' className='form-text text-muted'>이메일</small>
             </div>
 
             <div className='mb-3'>
@@ -92,7 +93,7 @@ function App() {
               </label>
               <textarea rows="4" className='form-control'></textarea>
             </div>
-            <button className='btn btn-primary mb-3'>
+            <button className='btn btn-warning mb-3'>
               전송하기
             </button>
           </form>
