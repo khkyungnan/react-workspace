@@ -1,7 +1,6 @@
 import './App.css';
-import { ThemeProvider } from './ThemeContext';
-import ThemeToggleButton from './ThemeToggleButton';
-import YTBAPI from './YTBAPI';
+import NumberGuessingGame from './NumberGuessingGame';
+
 //import Counter from './ReducerCount';
 //.Provider :해당 컴포넌트를
 //통해서 ThemeContext 안에 있는
@@ -10,7 +9,7 @@ import YTBAPI from './YTBAPI';
 function App() {
   return (
     <div>
-      <YTBAPI />
+      <NumberGuessingGame />
     </div>
   );
 }
