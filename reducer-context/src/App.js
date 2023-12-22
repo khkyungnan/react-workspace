@@ -1,5 +1,5 @@
 import './App.css';
-import NumberGuessingGame from './NumberGuessingGame';
+import NumberGuessingGameLimit from './NumberGuessingGameLimit';
 
 //import Counter from './ReducerCount';
 //.Provider :해당 컴포넌트를
@@ -9,7 +9,7 @@ import NumberGuessingGame from './NumberGuessingGame';
 function App() {
   return (
     <div>
-      <NumberGuessingGame />
+      <NumberGuessingGameLimit />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-const NumberGuessingGameTwo = () => {
+const NumberGuessingGameLimit = () => {
   const generateRandomNumber = () => {
     return Math.floor(Math.random() * 100) + 1;
   };
@@ -34,9 +34,7 @@ const NumberGuessingGameTwo = () => {
       setGuessHistory(newGuessHistory);
 
       if (guess === targetNumber) {
-        setMessage(
-          `정답입니다. 숫자는 : ${targetNumber}입니다.`
-        );
+        setMessage(`정답입니다. 숫자는 : ${targetNumber}입니다.`);
         setTargetNumber(generateRandomNumber());
         setAttempts(5);
         setGuessHistory([]);
@@ -87,4 +85,4 @@ const NumberGuessingGameTwo = () => {
   );
 };
 
-export default NumberGuessingGameTwo;
+export default NumberGuessingGameLimit;
