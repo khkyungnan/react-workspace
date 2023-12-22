@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import MovieListCarousel from "./MovieListCarousel";
+import RowColAlerts from './RowColAlerts';
 function App() {
   return (
     <div className="App">
-      <MovieListCarousel />
+      <RowColAlerts />
     </div>
   );
 }
