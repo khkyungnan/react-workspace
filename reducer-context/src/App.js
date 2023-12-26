@@ -1,6 +1,5 @@
 import './App.css';
-import NumberGuessingGameLimit from './NumberGuessingGameLimit';
-
+import ReducerCount from './ReducerCount';
 //import Counter from './ReducerCount';
 //.Provider :해당 컴포넌트를
 //통해서 ThemeContext 안에 있는
@@ -9,7 +8,7 @@ import NumberGuessingGameLimit from './NumberGuessingGameLimit';
 function App() {
   return (
     <div>
-      <NumberGuessingGameLimit />
+      <ReducerCount />
     </div>
   );
 }
