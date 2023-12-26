@@ -17,6 +17,14 @@ const dbConfig = {
 
 app.use(express.json());
 
+//binds = [], options = {}
+//파라미터를 필수로 넣지 않아도됨
+//binds = [],
+//where Id 추가적으로 클라이언트가 넣어야지만
+//들어갈 수 있는 값을 넣어줌
+
+// 예를들어 runQuery(select * from todos where id = taskId,[taskId])
+//options = {} 자동 커밋을 해야하거나 객체화 로 변경해줄 때 많이 사용
 async function runQuery(sql, binds = [], options = {}) {
   let connection;
 
@@ -27,31 +35,6 @@ async function runQuery(sql, binds = [], options = {}) {
     return result.rows.map((row) => ({
       ID: row[0],
       TASK: row[1],
-    }));
-  } catch (err) {
-    console.error(err);
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  }
-}
-
-async function cafeQuery(sql, binds = [], options = {}) {
-  let connection;
-
-  try {
-    connection = await oracledb.getConnection(dbConfig);
-    const result = await connection.execute(sql, binds, options);
-
-    return result.rows.map((row) => ({
-      ID: row[0],
-      NAME: row[1],
-      PRICE: row[2],
     }));
   } catch (err) {
     console.error(err);
