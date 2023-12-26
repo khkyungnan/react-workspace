@@ -25,6 +25,8 @@ app.use(express.json());
 
 // 예를들어 runQuery(select * from todos where id = taskId,[taskId])
 //options = {} 자동 커밋을 해야하거나 객체화 로 변경해줄 때 많이 사용
+// options은 하나만 있을 일 이없을 수 있으므로
+// {}) 안에 내용을 여러개 묶어서 사용할 수 있도록 함
 async function runQuery(sql, binds = [], options = {}) {
   let connection;
 
