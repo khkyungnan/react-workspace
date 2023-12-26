@@ -2,6 +2,17 @@
 //모달이란
 //웹페이지에서 특정 작업을 수행하기 위해
 //표시되는 작은 창
+
+/**
+import { Modal, Button } from 'react-bootstrap';
+ -> 부트스트랩 스타일을 아예 함수(컴포넌트)로 만들어서
+    제공해주는 것
+import 'bootstrap/dist/css/bootstrap.min.css';
+ -> className 에 bootstrap이 지정한 형식이 들어감
+    예를들어
+     className = "mt-5"
+ */
+
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
