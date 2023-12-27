@@ -17,16 +17,6 @@ const dbConfig = {
 
 app.use(express.json());
 
-//binds = [], options = {}
-//파라미터를 필수로 넣지 않아도됨
-//binds = [],
-//where Id 추가적으로 클라이언트가 넣어야지만
-//들어갈 수 있는 값을 넣어줌
-
-// 예를들어 runQuery(select * from todos where id = taskId,[taskId])
-//options = {} 자동 커밋을 해야하거나 객체화 로 변경해줄 때 많이 사용
-// options은 하나만 있을 일 이없을 수 있으므로
-// {}) 안에 내용을 여러개 묶어서 사용할 수 있도록 함
 async function runQuery(sql, binds = [], options = {}) {
   let connection;
 
@@ -58,11 +48,6 @@ app.get('/', (request, response) => {
 app.get('/api/todos', async (request, response) => {
   const todos = await runQuery('SELECT * FROM todos');
   response.json(todos);
-});
-
-app.get('/api/cafe', async (request, response) => {
-  const cafe = await cafeQuery('SELECT * FROM cafe');
-  response.json(cafe);
 });
 
 app.listen(PORT, () => {

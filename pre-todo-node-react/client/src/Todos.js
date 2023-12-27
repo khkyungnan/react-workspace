@@ -3,11 +3,13 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
+  //useState 최초 값이 무엇인지?
   const [todos, setTodos] = useState([]);
   // null 값으로 useState 선택해서 상세보는 selectTodo, setSelectTodo
 
   const [selectTodo, setSelectTodo] = useState(null);
   // 버튼클릭시 보여줄 코드 작성
+
   const watchTodo = (todo) => {
     //선택된 투두 아이템을 상세정보로 보여줄 예정
     setSelectTodo(todo);
