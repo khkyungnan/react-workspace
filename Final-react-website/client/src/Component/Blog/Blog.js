@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <h1>카페 리스트</h1>
+      <h1>블로그 </h1>
 
       <ul>
         {cafes.map((cafe) => (
@@ -43,7 +43,7 @@ function App() {
         ))}
       </ul>
 
-      <h2>새로운 카페 추가</h2>
+      <h2>블로그 내용 추가하기</h2>
       <div>
         <label>Name:</label>
         <input
