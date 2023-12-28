@@ -1,26 +1,22 @@
-//Todo.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CreatePags from './CreatePags';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ListPage from './ListPage';
-function Todo() {
-  //js로 state 상태관리
+import CreatePage from './CreatePags';
 
-  const Home = () => <div>Home</div>;
+const App = () => {
   const [actions, setActions] = useState([]);
 
-  //생성하기
   const addAction = (newAction) => {
     setActions([...actions, newAction]);
   };
-  //삭제하기
+
   const deleteAction = (id) => {
     setActions(actions.filter((action) => action.id !== id));
   };
 
   return (
     <Router>
-      <div>
+      <div className="App">
         <nav>
           <ul>
             <li>
@@ -33,15 +29,17 @@ function Todo() {
         </nav>
         <Routes>
           <Route
-            path="/ "
+            path="/"
             element={<ListPage actions={actions} deleteAction={deleteAction} />}
           />
-          <Route path="/create" element={<CreatePags action={addAction} />}>
-            생성
-          </Route>
+          <Route
+            path="/create"
+            element={<CreatePage addAction={addAction} />}
+          />
         </Routes>
       </div>
     </Router>
   );
-}
-export default Todo;
+};
+
+export default App;

@@ -44,11 +44,13 @@ const CreatePags = ({ addAction }) => {
         <br />
 
         <label>날짜 : </label>
+        <label>날짜 : </label>
         <input
           type="text"
           value={date}
-          onChange={(e) => date(e.target.value)}
+          onChange={(e) => setDate(e.target.value)}
         />
+
         <br />
         <button type="submit">할 일 추가하기</button>
       </form>
