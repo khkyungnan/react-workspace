@@ -8,7 +8,7 @@ import MovieList from './Component/Movie/MovieList';
 import NumberGuessingGame from './Component/Game/NumberGuessingGame';
 import Quiz from './Component/Game/Quiz';
 import TodoList from './Component/Todo/TodoList';
-
+import FastClick from './Component/Game/FastClick';
 function App() {
   return (
     <Router>
@@ -24,6 +24,7 @@ function App() {
               path="/numberGuessingGame"
               element={<NumberGuessingGame />}
             />
+            <Route path="/fastClick" element={<FastClick />} />
             <Route path="/quiz" element={<Quiz />} />
           </Routes>
         </div>

@@ -1,11 +1,15 @@
 //FastClick.js
 import React, { useState, useEffect } from 'react';
-
+import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const FastClick = () => {
   const [numbers, setNumbers] = useState([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGamOver] = useState(false);
 
+  useEffect(() => {
+    fetchGame();
+  }, []);
   //마우스 클릭 함수
   const mouseClick = (number) => {
     if (!gameOver && number === score + 1) {
@@ -38,25 +42,37 @@ const FastClick = () => {
     setGamOver(false);
   };
   return (
-    <div>
+    <Container className="mt-5">
+      <h1>1부터 10까지 숫자 맞추기</h1>
       {gameOver ? (
         <div>
-          <p>게임종료! 최종점수 : {score}</p>
-          <button onClick={fetchGame}>게임 재시작</button>
+          <Alert variant="success">
+            <p className="lead">게임종료! 최종점수 : {score}</p>
+            <Button variant="primary" size="lg" block onClick={fetchGame}>
+              게임 재시작
+            </Button>
+          </Alert>
         </div>
       ) : (
         <div>
-          <p>현재 게임 점수 : {score}</p>
-          <div>
+          <p className="lead text-center">현재 게임 점수 : {score}</p>
+          <Row className="justify-content-center">
             {numbers.map((number) => (
-              <div key={number} onClick={() => mouseClick(number)}>
-                {number}
-              </div>
+              <Col key={number} className="mb-3">
+                <Button
+                  variant="light"
+                  size="lg"
+                  block
+                  onClick={() => mouseClick(number)}
+                >
+                  {number}
+                </Button>
+              </Col>
             ))}
-          </div>
+          </Row>
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 
