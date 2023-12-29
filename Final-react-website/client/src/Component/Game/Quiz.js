@@ -116,6 +116,19 @@ const QuizApp = () => {
         </div>
       ) : (
         <div>
+          <ProgressBar
+            variant="warning"
+            now={progress}
+            style={{ height: '30px', borderRadius: '10px' }}
+            label={`${progress.toFixed(2)} %`}
+          />
+
+          <ProgressBar
+            now={progress}
+            variant="success"
+            label={`${progress.toFixed(2)} %`}
+          />
+
           <ProgressBar now={progress} label={`${progress.toFixed(2)} %`} />
 
           <div className="card">
