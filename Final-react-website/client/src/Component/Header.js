@@ -26,7 +26,7 @@ const Header = () => {
               <NavDropdown.Item as={Link} to="/numberGuessingGame">
                 Number Guessing Game
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/fastClick">
+              <NavDropdown.Item as={Link} to="/fastclickone">
                 Fask Click Game
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/quiz">
