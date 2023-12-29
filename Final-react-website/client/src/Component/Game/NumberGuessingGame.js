@@ -25,6 +25,7 @@ const NumberGuessingGame = () => {
   useEffect(() => {
     // 5번의 기회가 있기 때문에 5를 넣어줌
     // 숫자를 넣을수록 기회가 감소하기 때문에 -attempts 넣어줌
+    // 만약에 100에서 감소하게 만들고 싶다면 (attempts / 5) * 100;
     const newProgress = ((5 - attempts) / 5) * 100;
     setProgress(newProgress);
 

@@ -14,7 +14,7 @@ const FastClick = () => {
   const mouseClick = (number) => {
     if (!gameOver && number === score + 1) {
       setScore(score + 1);
-      if (score + 1 === 10) {
+      if (score + 1 === 50) {
         setGamOver(true);
       }
     }
@@ -33,7 +33,7 @@ const FastClick = () => {
     //sort 를 이용할 때 0 정렬 방향이 되기 때문에 0이 아니라 -0.5 를 해주면서
     //무작위로 정렬을 될 수 있도록 해주는 것
 
-    const newNumbers = Array.from({ length: 10 }, (_, index) => index + 1).sort(
+    const newNumbers = Array.from({ length: 50 }, (_, index) => index + 1).sort(
       () => Math.random() - 0.5
     );
     //게임 재시작할 경우 새로운 번호 생성 점수0으로 초기화 게임 오버를 아님으로 설정
@@ -58,7 +58,7 @@ const FastClick = () => {
           <p className="lead text-center">현재 게임 점수 : {score}</p>
           <Row className="justify-content-center">
             {numbers.map((number) => (
-              <Col key={number} className="mb-3">
+              <Col key={number} xs={2} className="mb-3">
                 <Button
                   variant="light"
                   size="lg"
